@@ -1,11 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeaderComponent = () => {
   return (
     <div>
         <header>
-            <nav className='navbar navbar-dark bg-dark'>
-                 <a className="navbar-brand" href="http://localhost:3000/employees">Employee Management System</a>
+            <nav className='navbar navbar-expand-lg navbar-dark bg-dark shadow-sm'>
+                <div className="container">
+                    <Link to="/employees" className="navbar-brand">
+                    👥 Employee Management System
+                    </Link>
+                 </div>
             </nav>
         </header>
         

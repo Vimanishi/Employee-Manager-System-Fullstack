@@ -38,38 +38,45 @@ const ListEmployeeComponent = () => {
         })
     }
   return (
-    <div className='container'>
-
-        <h2 className='text-center'>List of Employees</h2>
-        <button className='btn btn-primary mb-2'onClick={addNewEmployee}>Add Employee</button>
-        <table className='table table-striped table-bordered'>
-            <thead>
-                <tr>
-                    <th>Employee Id</th>
-                    <th>Employee First Name</th>
-                    <th>Employee Last Name</th>
-                    <th>Employee Email Id</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    employees.map(employee =>
-                        <tr key={employee.id}>
-                            <td>{employee.id}</td>
-                            <td>{employee.firstName}</td>
-                            <td>{employee.lastName}</td>
-                            <td>{employee.email}</td>
-                            <td>
-                                <button className='btn btn-info' onClick={() => updateEmployee(employee.id)}>Update</button>
-                                <button className='btn btn-danger' onClick={() => removeEmployee(employee.id)}
-                                    style={{marginLeft: '10px'}}
-                                >Delete</button>
-                            </td>
-                        </tr>)
-                }
-            </tbody>
-        </table>
+    <div className='container mt-4'>
+        <div className="card shadow-sm">
+            <div className="card-header">
+                <h2 className='text-center mb-0'>List of Employees</h2>
+            </div>
+            <div className="card-body">
+                <button className='btn btn-primary mb-3' onClick={addNewEmployee}>
+                    ➕ Add Employee
+                </button>
+                <div className="table-responsive">
+                    <table className='table table-striped table-bordered table-hover'>
+                        <thead className='table-dark'>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th className='text-center'>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                employees.map(employee =>
+                                    <tr key={employee.id}>
+                                        <td>{employee.id}</td>
+                                        <td>{employee.firstName}</td>
+                                        <td>{employee.lastName}</td>
+                                        <td>{employee.email}</td>
+                                        <td className='text-center'>
+                                            <button className='btn btn-info btn-sm me-2' onClick={() => updateEmployee(employee.id)}>✏️ Update</button>
+                                            <button className='btn btn-danger btn-sm' onClick={() => removeEmployee(employee.id)}>🗑️ Delete</button>
+                                        </td>
+                                    </tr>)
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

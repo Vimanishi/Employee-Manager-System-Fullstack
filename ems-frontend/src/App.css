@@ -1,9 +1,11 @@
+body {
+  background-color: #f8f9fa;
+}
+
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    text-align: center;
-    color: white;
+  background-color: #343a40; /* Dark background for footer */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
 }
