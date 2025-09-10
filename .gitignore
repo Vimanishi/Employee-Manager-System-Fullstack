@@ -1,0 +1,39 @@
+# Node.js / Vite / Frontend
+node_modules/
+dist/
+.vite/
+.env
+*.log
+
+# Java / Maven / Backend
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+
+# OS / Editor / Misc
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.idea/
+.vscode/
+*.bak
+
+# Others
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Ignore build output
+build/
+out/
+coverage/
